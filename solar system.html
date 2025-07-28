@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+   <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            height: 100vh;
+           
+        
+        }
+        #sun{
+            position: relative;
+            height: 50px;
+            width: 50px;
+            background-image: linear-gradient(red , orange);
+            border-radius: 50%;
+            box-shadow: 0 0 300px rgb(245, 57, 10);
+
+        }
+        #ringMercury{
+            width: 100px;
+            height: 100px;
+            border: 1px dashed rgb(228, 16, 16);
+            position: absolute;
+            border-radius: 50%;
+            animation-name: rotate;
+            animation-duration: 7s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+           
+        }
+        #mercury{
+            width: 20px;
+            height: 20px;
+            background-color: rgb(151, 158, 166);
+            border-radius: 50%;
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            box-shadow: 0 0 5px rgb(151, 158, 166);
+
+        }
+        #ringVenus{
+            width: 150px;
+            height: 150px;
+            border: 1px dashed rgb(239, 10, 10);
+            position: absolute;
+            border-radius: 50%;
+            animation-name: rotate;
+            animation-duration: 9s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        #venus{
+            width: 25px;
+            height: 25px;
+            background-image:  linear-gradient(rgb(231, 209, 9) , rgb(132, 137, 60) , rgb(182, 182, 28) , rgb(75, 72, 52));
+            border-radius: 50%;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            box-shadow: 0 0 5px rgb(151, 158, 166);
+        }
+        #ringEarth{
+            width: 200px;
+            height: 200px;
+            border: 1px dashed rgb(239, 10, 10);
+            position: absolute;
+            border-radius: 50%;
+            animation-name: rotate;
+            animation-duration:13s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        #earth{
+            width: 27px;
+            height: 27px;
+            background-color:  #4c97d4;
+            border-radius: 50%;
+            position: absolute;
+            left: 140px;
+            box-shadow: 0 0 5px rgb(151, 158, 166);
+        }
+        #ringMars{
+            width: 240px;
+            height: 240px;
+            border: 1px dashed rgb(239, 10, 10);
+            position: absolute;
+            border-radius: 50%;
+            animation-name: rotate;
+            animation-duration:18s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+
+        }
+        #mars{
+            width: 20px;
+            height: 20px;
+            background-image: linear-gradient(rgb(216, 186, 186) , red ,rgb(229, 0, 0), rgb(216, 186, 186));
+            border-radius: 50%;
+            position: absolute;
+            top: 21px;
+            left: 21px;
+            box-shadow: 0 0 5px rgb(151, 158, 166);
+        }
+        #ringJupiter{
+            width: 320px;
+            height: 320px;
+            border: 1px dashed rgb(239, 10, 10);
+            position: absolute;
+            border-radius: 50%;
+            animation-name: rotate;
+            animation-duration:22s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+
+        }
+        #jupiter{
+            width: 35px;
+            height: 35px;
+            background-image: linear-gradient(khaki , rgb(215, 140, 19) , rgb(107, 163, 188),rgb(195, 178, 172) ,rgb(194, 169, 56), rgb(67, 196, 205),khaki);
+            border-radius: 50%;
+            position: absolute;
+            top: -10px;
+            left: 160px;
+            box-shadow: 0 0 5px rgb(151, 158, 166)
+        }
+        #ringSaturn{
+            width: 370px;
+            height: 370px;
+            border: 1px dashed rgb(239, 10, 10);
+            position: absolute;
+            border-radius: 50%;
+            animation-name: rotate;
+            animation-duration:25s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+
+        }
+        #saturn{
+            width: 30px;
+            height: 30px;
+            background-image: linear-gradient( #ae9d4a,#ae9d4a,#ae9d4a,#ae9d4a,#ae9d4a , khaki);
+            border-radius: 50%;
+            position: absolute;
+            top: 37px;
+            left:37px;
+            box-shadow: 0 0 5px rgb(151, 158, 166)
+        }
+        #circle{
+            width:44px;
+            height: 6px;
+            border: 6px solid #e7d57a;
+            border-radius: 50%;
+            transform: rotate(34deg);
+            position: absolute;
+            top: 7px;
+            left: -13px;
+            transform:skewY(34deg)
+        }
+        #child{
+            width: 28px;
+            height: 6px;
+             background-color: #ae9d4a;
+            position: absolute;
+            left: 3.1px;
+            top: 8.8px;
+            transform: rotate(34deg);
+            border-radius: 1px 1px 1px 1px;
+
+        }
+        #ringUranus{
+            width: 470px;
+            height: 470px;
+            border: 1px dashed rgb(239, 10, 10);
+            position: absolute;
+            border-radius: 50%;
+            animation-name: rotate;
+            
+            animation-duration:28s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        #uranus{
+            width: 28px;
+            height: 28px;
+            background-color: aqua;
+            border-radius: 50%;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+            box-shadow: 0 0 5px rgb(151, 158, 166)
+        }
+        #circleU{
+            width:33px;
+            height: 5px;
+            border: 3px solid #1776c3;
+            border-radius: 50%;
+            transform: rotate(40deg);
+            position: absolute;
+            top: 8px;
+            left:-7px;
+            transform:skewY(45deg)
+        }
+        #childU{
+            width: 27px;
+            height: 4px;
+            background-color: aqua;
+            position: absolute;
+            left: 2px;
+            top: 11px;
+            transform: rotate(47deg);
+            border-radius: 1px 1px 1px 1px;
+        }
+        #ringNeptune{
+            width: 550px;
+            height: 550px;
+            border: 1px dashed rgb(239, 10, 10);
+            position: absolute;
+            border-radius: 50%;
+            animation-name: rotate;
+            animation-duration:30s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        #neptune{
+            width: 28px;
+            height: 28px;
+            background-color: rgb(30, 27, 203);
+            border-radius: 50%;
+            position: absolute;
+            top: 60px;
+            left: 60px;
+            box-shadow: 0 0 5px rgb(15, 117, 234)
+        }
+        @keyframes rotate{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+
+   </style>
+</head>
+<body>
+        <div id="sun"></div>
+        <div id="ringMercury">
+            <div id="mercury"></div>
+        </div>
+        <div id="ringVenus">
+            <div id="venus"></div>
+        </div>
+        <div id="ringEarth">
+            <div id="earth"></div>
+        </div>
+        <div id="ringMars">
+            <div id="mars"></div>
+        </div>
+        <div id="ringJupiter">
+            <div id="jupiter"></div>
+        </div>
+        <div id="ringSaturn">
+            <div id="saturn">
+            <div id="circle"></div>
+            <div id="child"></div>
+            </div>
+        </div>
+        
+        <div id="ringUranus">
+            <div id="uranus">
+                <div id="circleU"></div>
+                <div id="childU"></div>
+            </div>
+        </div>
+        <div id="ringNeptune">
+            <div id="neptune"></div>
+        </div>
+</body>
+</html>
